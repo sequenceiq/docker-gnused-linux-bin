@@ -9,6 +9,7 @@ branches:
 install:
     - go get github.com/progrium/gh-release
 script:
+    - mkdir -p release
     - docker build -t sed . && docker run --rm -it sed > release/sed-linux-4.2.2.tgz
     - gh-release create sequenceiq/docker-gnused-linux-bin 4.2.2
 
