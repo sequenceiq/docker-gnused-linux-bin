@@ -1,10 +1,13 @@
+language: go
+go:
+    - 1.4
 services:
   - docker
 branches:
     only:
         - master
 install:
-    - curl -L https://github.com/progrium/gh-release/releases/download/v2.2.0/gh-release_2.2.0_darwin_x86_64.tgz | tar -xz -C /usr/local/bin/
+    - go get github.com/progrium/gh-release
 script:
     - docker build -t sed . && docker run --rm -it sed > release/sed-linux-4.2.2.tgz
     - gh-release create sequenceiq/docker-gnused-linux-bin 4.2.2
