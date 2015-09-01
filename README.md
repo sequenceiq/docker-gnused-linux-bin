@@ -6,8 +6,9 @@ This repo uses and alpine linux based docker image to build a single binary stat
 
 You can download it from the [release page](https://github.com/sequenceiq/docker-gnused-linux-bin/releases)
 
+The oneliner install is:
 ```
-curl -L 
+curl -L https://github.com/sequenceiq/docker-gnused-linux-bin/releases/download/v4.2.2/sed-linux-4.2.2.tgz | tar -xz -C /usr/local/bin/
 ```
 
 ## Background
